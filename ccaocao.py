@@ -19,7 +19,11 @@ def pdf_to_ppt(pdf_path, ppt_path):
     #     slide.shapes.add_picture(img_path, Inches(0), Inches(0), width=ppt.slide_width)
 
     for page in doc:
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 9bb05ca86352e4f3810f3532093131fa161f8106
         # 创建一个Matrix对象，用于调整图像的缩放
         zoom_x = 20.0  # 横向缩放的倍数
         zoom_y = 20.0  # 纵向缩放的倍数
@@ -50,6 +54,10 @@ def pdf_to_ppt(pdf_path, ppt_path):
             print(f"Deleted {file_path}")  # 打印删除信息
 
 # 使用示例
+<<<<<<< HEAD
 # woshishabi
+=======
+
+>>>>>>> 9bb05ca86352e4f3810f3532093131fa161f8106
 if  name =='main':
     pdf_to_ppt("slide.pdf", "output.pptx")

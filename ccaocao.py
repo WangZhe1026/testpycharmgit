@@ -9,6 +9,10 @@ def pdf_to_ppt(pdf_path, ppt_path):
     doc = fitz.open(pdf_path)
     ppt = Presentation()
 
+    # 创建一个Matrix对象，用于调整图像的缩放
+    zoom_x = 20.0  # 横向缩放的倍数
+    zoom_y = 20.0  # 纵向缩放的倍数
+
     # for page in doc:  # 遍历PDF的每一页
     #     pix = page.get_pixmap()  # 将PDF页面转换为图像
     #     img_path = f"page_{page.number}.png"
@@ -19,9 +23,6 @@ def pdf_to_ppt(pdf_path, ppt_path):
     #     slide.shapes.add_picture(img_path, Inches(0), Inches(0), width=ppt.slide_width)
 
     for page in doc:
-        # 创建一个Matrix对象，用于调整图像的缩放
-        zoom_x = 20.0  # 横向缩放的倍数
-        zoom_y = 20.0  # 纵向缩放的倍数
         mat = fitz.Matrix(zoom_x, zoom_y)  # 创建缩放矩阵
 
         # 将PDF页面转换为图像
@@ -50,5 +51,5 @@ def pdf_to_ppt(pdf_path, ppt_path):
 
 # 使用示例
 # woshishabi
-if  name =='main':
-    pdf_to_ppt("slide.pdf", "output.pptx")
+
+pdf_to_ppt("slide.pdf", "output.pptx")
